@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Clock</title>
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="js.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1 id="tit">What time is it?</h1>
+      <div id="clock-cir">
+        <span class="center-dot"></span>
+        <ul id="analog">
+          <li class="needle hour"></li>
+          <li class="needle minute"></li>
+          <li class="needle second"></li>
+        </ul>
+      </div>
+      <p id="digital">
+        <span class="state"></span>
+        <span class="num hour"></span>
+        :
+        <span class="num minute"></span>
+        :
+        <span class="num second"></span>
+      </p>
+    </div>
+  </body>
+</html>

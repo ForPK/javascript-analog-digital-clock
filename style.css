@@ -1,0 +1,118 @@
+body,
+html {
+  text-align: center;
+  vertical-align: middle;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --spacing: 20px;
+}
+
+.wrap {
+  padding: var(--spacing);
+  margin: 0 auto;
+}
+
+#tit {
+  font-size: 24px;
+  font-style: italic;
+  color: #555;
+}
+
+#clock-cir {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 20px solid #d1b2ff;
+  margin: 0 auto;
+  margin-top: var(--spacing);
+}
+
+#clock-cir .center-dot {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #000;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
+
+#analog {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 5px;
+  height: 56%;
+  margin: 0 auto;
+}
+
+#analog .needle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+.needle.hour,
+.needle.minute {
+  background: #000;
+}
+
+.needle.hour {
+  height: 65%;
+  z-index: 4;
+  transform-origin: center 85%;
+}
+
+.needle.minute {
+  z-index: 3;
+  height: 75%;
+  transform-origin: center 88%;
+}
+
+.needle.second {
+  width: 3px;
+  height: 90%;
+  background: #ff0000;
+  transform-origin: center 88%;
+}
+
+#digital {
+  font-size: 50px;
+  font-weight: bold;
+  margin: var(--spacing) 0;
+}
+
+#digital span {
+  display: inline-block;
+}
+
+#digital .state {
+  color: #5c3792;
+}
+
+#digital .num {
+  width: 60px;
+}
+
+.num.second {
+  text-align: left;
+}
